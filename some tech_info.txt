@@ -1,0 +1,51 @@
+
+Some Technical Information
+
+Running
+python -m pip install -r requirements.txt
+python main.py
+Photos should be placed in data/photos (jpg, jpeg, png, webp, bmp).
+
+Quotes should be placed in data/quotes.json, with the date key in MM-DD format.
+
+Building
+Compile the executable:
+python build.py          # dist/Krpabindu.exe
+Build the installer using the Inno Setup Compiler (open installer.iss in Inno Setup and build it there).
+Or via the command line:
+iscc installer.iss       # Setup.exe
+Architecture
+
+The interface does not read JSON or access files directly; it only does so through QuoteManager, ImageManager, and Settings.
+
+The modules are independent of one another—their interaction is handled through mainwindow.py.
+
+Replacing the storage backend (SQLite, PostgreSQL) requires changes only to the data modules.
+
+
+Кое-какая техническая информация
+
+1. Запуск
+```
+python -m pip install -r requirements.txt
+python main.py
+```
+
+2. Фотографии положите в `data/photos` (jpg, jpeg, png, webp, bmp).
+Цитаты — в `data/quotes.json`, ключ даты в формате `MM-DD`.
+
+3. Сборка
+
+* компиляция исполняемого файла:
+python build.py          # dist/Krpabindu.exe
+
+* сборка установочного файла при помощи Inno Setup compiler (открыть в нем installer.iss и собрать в приложении).
+* Либо через консоль:
+iscc installer.iss       # Setup.exe
+
+4. Архитектура
+
+Интерфейс не читает JSON и не обращается к файлам: только через
+`QuoteManager`, `ImageManager` и `Settings`. Модули не знают друг о друге —
+связь идёт через `mainwindow.py`. Замена хранилища (SQLite, PostgreSQL)
+требует правки только модулей данных.
