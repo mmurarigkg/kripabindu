@@ -1,0 +1,19 @@
+{
+  "website": "https://www.youtube.com/@GopalKrishnaGoswamiOfficial",
+  "photos_folder": "",
+  "theme": "mica",
+  "language": "en",
+  "window_color": "30,42,44,0.72",
+  "window_position": [
+    162,
+    64
+  ],
+  "window_size": [
+    881,
+    537
+  ],
+  "animation_duration": 400,
+  "photo_interval": 0,
+  "show_today": true,
+  "last_date": "2026-08-21"
+}
